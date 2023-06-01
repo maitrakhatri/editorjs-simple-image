@@ -1,12 +1,8 @@
-![](https://badgen.net/badge/Editor.js/v2.0/blue)
+# Simple Image Tool (without Caption)
 
-# Simple Image Tool
+Provides Image Blocks (without Caption) for the [Editor.js](https://editorjs.io).
 
-Provides Image Blocks for the [Editor.js](https://editorjs.io).
-
-Works only with pasted image URLs and requires no server-side uploader.
-
-![](assets/image-uploading.gif)
+Works for Image drag n drop, pasting images from clipboard and requires no server-side uploader.
 
 ## Installation
 
@@ -15,31 +11,25 @@ Works only with pasted image URLs and requires no server-side uploader.
 Get the package
 
 ```shell
-npm i --save-dev @editorjs/simple-image
+npm i @maitrakhatri/editorjs-simple-image
 ```
 
 Include module at your application
 
 ```javascript
-const SimpleImage = require('@editorjs/simple-image');
+const SimpleImage = require('@maitrakhatri/editorjs-simple-image');
+```
+
+OR
+
+```javascript
+import SimpleImage from "@maitrakhatri/editorjs-simple-image";
 ```
 
 ### Download to your project's source dir
 
 1. Upload folder `dist` from repository
 2. Add `dist/bundle.js` file to your page.
-
-### Load from CDN
-
-You can load specific version of package from [jsDelivr CDN](https://www.jsdelivr.com/package/npm/@editorjs/simple-image).
-
-`https://cdn.jsdelivr.net/npm/@editorjs/simple-image@latest`
-
-Then require this script on page with Editor.js.
-
-```html
-<script src="..."></script>
-```
 
 ## Usage
 
@@ -77,7 +67,6 @@ This Tool has no config params
 | Field          | Type      | Description                     |
 | -------------- | --------- | ------------------------------- |
 | url            | `string`  | image's url                     |
-| caption        | `string`  | image's caption                 |
 | withBorder     | `boolean` | add border to image             |
 | withBackground | `boolean` | need to add background          |
 | stretched      | `boolean` | stretch image to screen's width |
@@ -88,7 +77,6 @@ This Tool has no config params
     "type" : "image",
     "data" : {
         "url" : "https://www.tesla.com/tesla_theme/assets/img/_vehicle_redesign/roadster_and_semi/roadster/hero.jpg",
-        "caption" : "Roadster // tesla.com",
         "withBorder" : false,
         "withBackground" : false,
         "stretched" : true
